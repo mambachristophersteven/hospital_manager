@@ -1,0 +1,220 @@
+@font-face {
+    font-family: poppins;
+    src: url(fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: fingerpaint;
+    src: url(fonts/FingerPaint-Regular.ttf);
+}
+/* root variables */
+
+/* colors for light theme */
+:root{
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677463;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-1: 0.4rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+
+}
+
+/* dark mode theme colors */
+
+.dark-theme-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: #rgba(0,0,0,0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins,sans-serif;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    
+}
+
+.container .nav{
+    display: flex;
+    height: 10.2rem;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.container .nav img{
+    width: 4rem;
+    height: 4rem;    
+}
+
+.container .body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    justify-content: space-evenly;
+
+}
+
+.container .body h2{
+    margin-bottom: 0.3rem;
+
+}
+
+.container .body form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    width: 500px;
+    transition: all 300ms ease;
+    
+}
+
+.container .body form:hover{
+    box-shadow: none;
+}
+
+.container .body form .wrapper{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.wrapper .image-container img{
+    border-radius: 50%;
+    border: 3px solid rgb(109, 109, 241);
+    width: 180px;
+    height: 180px;
+}
+
+.wrapper svg{
+    width: 35px;
+    height: 35px;
+    background: rgb(109, 109, 241);
+    border-radius: 50%;
+    padding: 5px;
+    position: absolute;
+    right: 5%;
+    bottom: 18%;
+    cursor: pointer;
+}
+
+.container .body form input{
+    background: transparent;
+    color: var(--color-dark);
+    background: var(--color-light);
+    margin-top: 1rem;
+    padding: 0.5rem 1.6rem;
+    border-radius: var(--border-radius-1);
+    width: 10rem;
+    align-items: center;
+    height: 35px;
+    width: 300px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.container .body form input[type="submit"]{
+    cursor: pointer;
+    background: #9b9898;
+    color: var(--color-white);
+}
+
+#error{
+    color: var(--color-danger);
+}
+
+.body form .select-input-group{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+    width: 100%;
+}
+
+form .select-heading{
+    color: rgb(128, 124, 124);
+    margin-bottom: 0.5rem;
+    font-size: 1.0rem;
+}
+
+form select{
+    background: transparent;
+    color: var(--color-dark);
+    background: var(--color-light);
+    /* margin-top: 1rem; */
+    padding: 0.5rem 1.6rem;
+    border-radius: var(--border-radius-1);
+    width: 10rem;
+    align-items: center;
+    height: 35px;
+    width: 300px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* body{
+    background: black;
+} */
